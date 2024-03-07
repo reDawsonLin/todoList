@@ -126,4 +126,7 @@ const requestListener = (req, res) => {
 };
 
 const server = http.createServer(requestListener);
-server.listen(3005);
+// server.listen(3005);
+
+// rewrite 是因為雲端部屬服務會有自己的試射 port 號碼，這邊先跟進
+server.listen(process.env.PORT || 3005);
