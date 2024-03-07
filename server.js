@@ -128,5 +128,6 @@ const requestListener = (req, res) => {
 const server = http.createServer(requestListener);
 server.listen(3005);
 
-// // rewrite 是因為雲端部屬服務會有自己的試射 port 號碼，這邊先跟進
+// rewrite 是因為雲端部屬服務會有自己的試射 port 號碼，這邊先跟進
+// 實際測試過後，兩種寫法皆不影響 Render 部署 -------
 // server.listen(process.env.PORT || 3005);
