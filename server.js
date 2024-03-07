@@ -26,7 +26,7 @@ const requestListener = (req, res) => {
     res.write(
       JSON.stringify({
         status: "success",
-        data: body,
+        data: todoList,
       })
     );
     res.end();
